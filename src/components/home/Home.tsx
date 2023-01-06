@@ -153,7 +153,6 @@ const SecondMain = styled('div')({
 
 export const Home = ( props:Props) => {
     const auth = getAuth();
-    if (auth.currentUser){
         return (
         <Root>
             <NavbarContainer>
@@ -162,9 +161,9 @@ export const Home = ( props:Props) => {
                 </Logo>
                 <LogoNavigation>
 
-                    <Button color='secondary' component={Link} to='/' >Home</Button> 
+
                     <Button color='secondary' component={Link} to='/dashboard' >Game Finder</Button> 
-                    <Button color='secondary' component={Link} to='/signin' >Sign Out</Button> 
+
             </LogoNavigation>
             </NavbarContainer>
             <Main>
@@ -187,42 +186,6 @@ export const Home = ( props:Props) => {
                 </MainBackTwo>
             </SecondMain>
         </Root>
-        )
-    } else{
-        return (
-            <Root>
-                <NavbarContainer>
-                    <Logo>
-                        <LogoA href="#">Sale Finder</LogoA>
-                    </Logo>
-                    <LogoNavigation>
-    
-                        <Button color='primary' component={Link} to='/' >Home</Button> 
-                        <Button color='primary' component={Link} to='/signin' >Sign In/Register</Button> 
-                </LogoNavigation>
-                </NavbarContainer>
-                <Main>
-                <MainBack>
-                    <h1>Sale Checker</h1>
-                    <h5></h5>
-                    <p>Application that lets you enter in a specified price and lets you find games at or under the price.
-                    </p>
-                </MainBack>
-            </Main>
-            <SecondMain>
-                <MainTwo>
-
-                </MainTwo>
-                <MainBackTwo>
-                    <h1 >Find Games Within Your Budget</h1>
-                    <h3>Hate it when you have 2 dollars on steam and have no idea what to buy. The money is sitting and waiting to be used. Luckily there is a solution for that 
-                        problem, Steam Price Checker! Enter in your desired amount and find fun games to play.
-                    </h3>
-                </MainBackTwo>
-            </SecondMain>
-            </Root>
-            )
-    }
-    
-
+    )  
 }
+    
